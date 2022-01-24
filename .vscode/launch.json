@@ -11,9 +11,7 @@
             "mode": "auto",
             "program": "${workspaceFolder}/main.go",
             "env": {
-                "APIKEY":"",
-                "SECRET":"",
-                "ENDPOINT":"",
+                "ENDPOINT":"bucket.cloud.lintasarta.co.id:8082",
             },
             "args": [
             ]
