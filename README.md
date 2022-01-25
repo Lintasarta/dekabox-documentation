@@ -2,7 +2,7 @@
 
 ## Prequistes
 
-1. Have username and password DekaBox (if you dont have, you can subscribe to [Cloudeka Service Portal](https://cmd.cloudeka.id)
+1. Have username and password DekaBox (if you dont have, you can subscribe to [Cloudeka Service Portal](https://cmd.cloudeka.id))
 2. Download aws cli from [here](https://aws.amazon.com/cli/)
 3. Have sufficient quota for DekaBox
 4. Have installed golang from [golang website](https://go.dev/dl/)
