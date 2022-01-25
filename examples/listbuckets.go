@@ -1,9 +1,9 @@
 /*
- * This example to show demonstrate how to get content name, type, and also size
+ * This example to show demonstrate how to get bucket name and creation date
  * from SDK
  */
-
-package examples
+ 
+ package examples
 
 import (
 	"os"
@@ -14,9 +14,8 @@ import (
 	log "github.com/sirupsen/logrus"
 )
 
-func ListObject() {
+func ListBuckets() {
 	endpoint := os.Getenv("ENDPOINT")
-	bucket := os.Getenv("BUCKET")
 
 	sess := session.Must(session.NewSession(&aws.Config{
 		Region:   aws.String("auto"),
@@ -28,17 +27,14 @@ func ListObject() {
 	config.WithS3ForcePathStyle(*aws.Bool(true))
 	client := s3.New(sess, config)
 
-	x := s3.ListObjectsInput{
-		Bucket: aws.String(bucket),
-	}
-	result, err := client.ListObjects(&x)
+	input := s3.ListBucketsInput{}
+
+	result, err := client.ListBuckets(&input)
 	if err != nil {
 		log.Fatalf("error : %s", err.Error())
 	}
-
-	for _, content := range result.Contents {
-		log.Infof("DisplayName %s", *content.Key)
-		log.Infof("Storage Type %s", *content.StorageClass)
-		log.Infof("Size %d", *content.Size)
+	for _, content := range result.Buckets {
+		log.Infof("Name %s", *content.Name)
+		log.Infof("Creation Date %s", *content.CreationDate)
 	}
 }

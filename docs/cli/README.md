@@ -5,7 +5,7 @@
 1. Have installed aws cli. Download aws cli from [here](https://aws.amazon.com/cli/)
 2. Have DekaBox account
 
-## 1. Configure the Amazon Web Services settings to use the account you created in the StorageGRID system:
+## 1. Configure the DekaBox S3 credential by using AWS S3 cli
 
 Try to run following command
 
