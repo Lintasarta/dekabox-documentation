@@ -3,22 +3,19 @@
 ## Prequistes
 
 1. Have username and password DekaBox (if you dont have, you can subscribe to [Cloudeka Service Portal](https://cmd.cloudeka.id)
-2. Have sufficient quota for DekaBox
-3. Have installed golang from [golang website](https://go.dev/dl/)
-4. Have installed editor such as Visual Studio
+2. Download aws cli from [here](https://aws.amazon.com/cli/)
+3. Have sufficient quota for DekaBox
+4. Have installed golang from [golang website](https://go.dev/dl/)
+5. Have installed editor such as Visual Studio
 
-## AWS library file config
+## Connect to DekaBox using AWS CLI
 
-Create aws file config for credentials with following format
+Read more in [here](docs/cli/README.md)
 
-```
-[default]
-aws_access_key_id=1T24XXDFY5PIU6JZAYIM3
-aws_secret_access_key=7hvn/0masdssdonC8YdaeW9x5XLXK8uexQz/V/4R
-```
+## Connect to DekaBox using AWS API
 
-## Environment Variables Preparation
+Read more in [here](docs/api/README.md)
 
-1. DekaBox Apikey and Secrt
-2. DekaBox Endpoint
-3. DekaBox Region
+## Related
+
+1. [Bucket Policy](docs/dekabox-policy/bucket-policy-example.md)
