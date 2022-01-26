@@ -3,7 +3,7 @@
  * from SDK
  */
 
-package examples
+package basic
 
 import (
 	"os"
@@ -28,10 +28,10 @@ func ListObject() {
 	config.WithS3ForcePathStyle(*aws.Bool(true))
 	client := s3.New(sess, config)
 
-	x := s3.ListObjectsInput{
+	listObjectInput := s3.ListObjectsInput{
 		Bucket: aws.String(bucket),
 	}
-	result, err := client.ListObjects(&x)
+	result, err := client.ListObjects(&listObjectInput)
 	if err != nil {
 		log.Fatalf("error : %s", err.Error())
 	}

@@ -2,8 +2,8 @@
  * This example to show demonstrate how to get bucket name and creation date
  * from SDK
  */
- 
- package examples
+
+package basic
 
 import (
 	"os"

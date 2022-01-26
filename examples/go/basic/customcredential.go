@@ -3,8 +3,7 @@
  * usually S3 SDK search for file ~/.aws/credential in system
  */
 
-
-package examples
+package basic
 
 import (
 	"os"
